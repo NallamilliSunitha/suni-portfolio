@@ -513,6 +513,118 @@ border-radius:15px;
     /* =========================
    Coding Profiles Section
 ========================= */
+#experience{
+ padding: 40px 10%;
+  background: white;
+  margin: 60px;
+  border-radius: 15px;
+}
+ .experience-card {
+      background: linear-gradient(to bottom right, #fff, #ffeef1);
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .experience-title h1 {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: pink;
+    }
+
+    .company {
+      font-size: 1rem;
+      color: #444;
+      font-weight:bold;
+      margin-top: 2px;
+    }
+
+    /* Date as button */
+    .experience-date {
+      padding: 6px 14px;
+      background: #FFC0CB;
+      color: #fff;
+      font-size: 0.9rem;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .experience-card ul {
+      margin: 12px 0 18px;
+      padding-left: 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Footer with skills */
+    .experience-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      padding: 6px 12px;
+      background: #ffe6f0;
+      border: 1px solid #ffb6c1;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: #d63384;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .skill-tag:hover {
+      background: #ff69b4;
+      color: #fff;
+      border-color: #ff69b4;
+    }
+
+    /* Internship certificate button */
+    .certificate-btn {
+      padding: 8px 18px;
+      background: #FFC0CB;
+      border-radius: 25px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .certificate-btn:hover {
+     background: #ff69b4;
+      transform: scale(1.05);
+    }
+
+
+/* =========================
+       Coding Profiles Section
+    ========================= */
+    /* =========================
+   Coding Profiles Section
+========================= */
 #coding-profiles {
   padding: 40px 10%;
   background: white;
@@ -790,17 +902,18 @@ border-radius:15px;
             letter-spacing: 0.5px;
         }
 
-        .contact-details a {
-            font-size: 1rem;
-            color: #2563eb;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+       .contact-details a {
+    font-size: 1rem;
+    color: #ff69b4; /* bright pink */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-        .contact-details a:hover {
-            color: #1d4ed8;
-            text-decoration: underline;
-        }
+.contact-details a:hover {
+    color: #ff1493; /* darker pink on hover */
+    text-decoration: underline;
+}
+
 
         @media (max-width: 968px) {
             .contact-wrapper {
@@ -827,12 +940,15 @@ border-radius:15px;
             }
         }
 .no-link {
-  text-decoration: none;   /* removes underline */
-  color: black;          /* takes color from parent text */
-  cursor: pointer;         /* keeps clickable pointer */
+  color: inherit;          /* Use normal text color */
+  text-decoration: none;   /* Remove underline */
+  cursor: pointer;         /* Show pointer on hover */
 }
 
-
+.no-link:hover {
+  text-decoration: underline; /* Optional: show underline only on hover */
+  color: #ff69b4;            /* Optional: change color on hover */
+}
   </style>
 </head>
 <body>
@@ -846,6 +962,9 @@ border-radius:15px;
       <li><a href="#about">About</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
+ <li><a href="#experience">Experience</a></li>
+
+
       <li><a href="#projects">Projects</a></li>
       <li><a href="#coding-profiles">Coding Profiles</a></li>
       <li><a href="#Contact">Contact</a></li>
@@ -1002,6 +1121,82 @@ border-radius:15px;
       </div>
     </div>
   </section>
+<section id="experience">
+<div class="section-header">
+      <h1>Experience</h1>
+        <p>Professional Experience and Internships</p>
+</div>
+
+    <!-- Experience Card 1 -->
+    <div class="experience-card">
+      <div class="experience-header">
+        <div>
+          <div class="experience-title">
+            <h1>AI Intern</h1>
+          </div>
+          <div class="company">Smart Internz</div>
+        </div>
+        <span class="experience-date">May 2024 - July 2024</span>
+      </div>
+
+      <ul>
+        <li>Developed and optimized machine learning models for AI applications.</li>
+        <li>Trained CNNs for image classification tasks.</li>
+        <li>Performed dataset analysis and preprocessing for improved performance.</li>
+        <li>Collaborated with cross-functional teams on AI research projects.</li>
+      </ul>
+
+      <div class="experience-footer">
+        <div class="skills-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Deep Learning</span>
+<span class="skill-tag">Data preprocessing</span>
+
+
+
+        </div>
+        <a href="smart.pdf" class="certificate-btn">Internship Certificate</a>
+      </div>
+    </div>
+
+    <!-- Experience Card 2 -->
+    <div class="experience-card">
+      <div class="experience-header">
+        <div>
+          <div class="experience-title">
+            <h1>Android Development Intern</h1>
+          </div>
+          <div class="company">1stop / Threat Prism</div>
+        </div>
+        <span class="experience-date">Jan 2024 - Mar 2024</span>
+      </div>
+
+      <ul>
+        <li>
+Developed and tested Android applications using Android Studio and Kotlin.</li>
+        <li>Implemented modern UI/UX layouts, navigation patterns, and responsive design.</li>
+        <li>Applied mobile app architecture best practices to improve maintainability.</li>
+<li>Delivered assigned tasks on time, demonstrating strong problem-solving and adaptability.</li>
+      </ul>
+
+      <div class="experience-footer">
+        <div class="skills-tags">
+          <span class="skill-tag">Android Studio</span>
+          <span class="skill-tag">Kotlin</span>
+          <span class="skill-tag">Mobile UI/UX</span>
+          <span class="skill-tag">App Architecture</span>
+        </div>
+        <a href="1stopin.pdf" class="certificate-btn">Internship Certificate</a>
+<a href="1stopp.pdf" class="certificate-btn">Project Certificate</a>
+
+      </div>
+    </div>
+
+</section>
+
 
   <!-- Projects Section -->
   <section id="projects">
@@ -1111,11 +1306,11 @@ border-radius:15px;
         <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode">
       </div>
       <div class="platform-name">LeetCode</div>
-      <div class="achievement">5-star in Problem Solving</div>
+      <div class="achievement">Coding Enthusiast</div>
     </div>
     <div class="card-back">
       <div class="back-text">Visit My Profile</div>
-      <a href="https://leetcode.com/your-username" class="view-profile-btn" target="_blank">View Profile</a>
+      <a href="https://leetcode.com/u/Nallamilli_Sunitha/" class="view-profile-btn" target="_blank">View Profile</a>
     </div>
   </div>
 </div>
@@ -1132,7 +1327,7 @@ border-radius:15px;
     </div>
     <div class="card-back">
       <div class="back-text">Visit My Profile</div>
-      <a href="https://www.codechef.com/users/your-username" class="view-profile-btn" target="_blank">View Profile</a>
+      <a href="https://www.codechef.com/users/sunitha11" class="view-profile-btn" target="_blank">View Profile</a>
     </div>
   </div>
 </div>
@@ -1149,7 +1344,7 @@ border-radius:15px;
     </div>
     <div class="card-back">
       <div class="back-text">Visit My Profile</div>
-      <a href="https://www.hackerrank.com/your-username" class="view-profile-btn" target="_blank">View Profile</a>
+      <a href="https://www.hackerrank.com/profile/sunithanallamil1" class="view-profile-btn" target="_blank">View Profile</a>
     </div>
   </div>
 </div>
@@ -1166,7 +1361,7 @@ border-radius:15px;
     </div>
     <div class="card-back">
       <div class="back-text">Visit My Profile</div>
-      <a href="https://auth.geeksforgeeks.org/user/your-username" class="view-profile-btn" target="_blank">View Profile</a>
+      <a href="https://www.geeksforgeeks.org/user/sunithanalyt2r/" class="view-profile-btn" target="_blank">View Profile</a>
     </div>
   </div>
 </div>
@@ -1221,7 +1416,7 @@ border-radius:15px;
                         </div>
                         <div class="contact-details">
                             <h3>Email</h3>
-                            <a href="mailto:sunithanalllamilli08@gmail.com">sunithanalllamilli08@gmail.com</a>
+                            <a href="mailto:sunithanallamilli08@gmail.com" class="no-link">sunithanallamilli08@gmail.com</a>
                         </div>
                     </div>
 
@@ -1246,7 +1441,7 @@ border-radius:15px;
                         </div>
                         <div class="contact-details">
                             <h3>Location</h3>
-                            <a href="https://maps.google.com/?q=Mandapeta,Andhra Pradesh,India" target="_blank">Mandapeta, Andhra Pradesh, India</a>
+                            <a href="https://maps.google.com/?q=Mandapeta,Andhra Pradesh,India" target="_blank" class="no-link">Mandapeta, Andhra Pradesh, India</a>
                         </div>
                     </div>
                 </div>
@@ -1295,7 +1490,12 @@ border-radius:15px;
     </script>
 
 </section>
-  
+<script>
+  function toggleMenu() {
+    document.querySelector('nav ul').classList.toggle('active');
+  }
+</script>
+
 
 
 
